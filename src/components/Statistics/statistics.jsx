@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Statistics = ({ stats }) => {
+const Statistics = ({ stats, tittle }) => {
   return (
     <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+      {tittle && <h2 className="title">{tittle}</h2>}
 
       <ul className="stat-list">
         {stats.map(stat => (
