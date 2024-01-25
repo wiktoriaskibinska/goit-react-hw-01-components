@@ -1,10 +1,10 @@
-import Profile from './profile/Profile.jsx';
+import Profile from './profile/profile.jsx';
 import user from './profile/user.json';
-import Statistics from './statistics/Statistics.jsx';
+import Statistics from './statistics/statistics.jsx';
 import data from './statistics/data.json';
-import FriendList from './friendList/FriendList.jsx';
+import FriendList from './friendList/friendList.jsx';
 import friends from './friendList/friends.json';
-import TransactionsHistory from './transactions/TransactionsHistory.jsx';
+import TransactionsHistory from './transactions/transactionsHistory.jsx';
 import transactions from './transactions/transactions.json';
 
 export const App = () => {
