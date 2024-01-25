@@ -1,10 +1,16 @@
 import React from 'react';
+import css from './FriendList.module.css';
 
 const FriendList = ({ friends }) => {
   return (
-    <ul class="friend-list">
+    <ul className="friend-list">
       {friends.map(friend => (
-        <FriendListItem avatar={friend.avatar} name={friend.name} isOnline />
+        <FriendListItem
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}
+          key={friend.id}
+        />
       ))}
     </ul>
   );
@@ -12,10 +18,12 @@ const FriendList = ({ friends }) => {
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <li class="item">
-      <span class="status"></span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
+    <li className="item">
+      <span className={`${css.status} ${isOnline ? css.online : css.offline}`}>
+        ////
+      </span>
+      <img className="avatar" src={avatar} alt="User avatar" width="48" />
+      <p className="name">{name}</p>
     </li>
   );
 };
