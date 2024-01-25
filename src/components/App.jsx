@@ -1,5 +1,5 @@
-import Profile from './Profile/Profile.jsx';
-import user from './Profile/user.json';
+import Profile from './profile/Profile.jsx';
+import user from './profile/user.json';
 import Statistics from './Statistics/Statistics.jsx';
 import data from './Statistics/data.json';
 import FriendList from './FriendList/FriendList.jsx';
