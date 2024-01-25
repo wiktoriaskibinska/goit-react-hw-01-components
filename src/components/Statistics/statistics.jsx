@@ -1,19 +1,22 @@
 import React from 'react';
+import css from './Statistisc.module.css';
 
 const Statistics = ({ stats, tittle }) => {
   return (
-    <section className="statistics">
-      {tittle && <h2 className="title">{tittle}</h2>}
+    <div className={css.wrapper}>
+      <section className={css.statistics}>
+        {tittle && <h2 className={css.tittle}>{tittle}</h2>}
 
-      <ul className="stat-list">
-        {stats.map(stat => (
-          <li className="item" key={stat.id}>
-            <span className="label">{stat.label}</span>
-            <span className="percentage">{stat.percentage}</span>
-          </li>
-        ))}
-      </ul>
-    </section>
+        <ul className={css.statList}>
+          {stats.map(stat => (
+            <li className={css.item} key={stat.id}>
+              <span className={css.label}>{stat.label}</span>
+              <span className={css.percentage}>{stat.percentage}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
   );
 };
 
