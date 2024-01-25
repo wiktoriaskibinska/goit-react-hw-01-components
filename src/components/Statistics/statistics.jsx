@@ -1,5 +1,5 @@
 import React from 'react';
-import css from './Statistisc.module.css';
+import css from './statistisc.module.css';
 
 const Statistics = ({ stats, tittle }) => {
   return (
