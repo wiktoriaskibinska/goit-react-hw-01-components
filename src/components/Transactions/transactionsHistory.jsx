@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './TransactionsHistory.module.css';
+import PropTypes from 'prop-types';
 
 const TransactionsHistory = ({ items }) => {
   return (
@@ -21,6 +22,9 @@ const TransactionsHistory = ({ items }) => {
     </div>
   );
 };
+TransactionsHistory.propTypes = {
+  items: PropTypes.array,
+};
 
 const TransactionItem = ({ transaction }) => {
   const { type, amount, currency } = transaction;
@@ -32,6 +36,9 @@ const TransactionItem = ({ transaction }) => {
       <td>{currency}</td>
     </tr>
   );
+};
+TransactionItem.propTypes = {
+  transaction: PropTypes.object,
 };
 
 export default TransactionsHistory;

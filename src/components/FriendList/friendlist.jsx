@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './FriendList.module.css';
+import PropTypes from 'prop-types';
 
 const FriendList = ({ friends }) => {
   return (
@@ -18,6 +19,10 @@ const FriendList = ({ friends }) => {
   );
 };
 
+FriendList.propTypes = {
+  friends: PropTypes.array,
+};
+
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <li className={css.item}>
@@ -28,6 +33,11 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
       <p className={css.name}>{name}</p>
     </li>
   );
+};
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
 };
 
 export default FriendList;

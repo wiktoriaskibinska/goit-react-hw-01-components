@@ -1,5 +1,6 @@
 import React from 'react';
 import css from './statistisc.module.css';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ stats, tittle }) => {
   return (
@@ -18,6 +19,10 @@ const Statistics = ({ stats, tittle }) => {
       </section>
     </div>
   );
+};
+Statistics.propTypes = {
+  stats: PropTypes.array,
+  tittle: PropTypes.string,
 };
 
 export default Statistics;
